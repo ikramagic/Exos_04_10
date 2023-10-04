@@ -1,1 +1,2 @@
-#fejxdjdopqmejdx
+# 00_hello.rb
+
