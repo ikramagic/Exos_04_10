@@ -12,11 +12,20 @@ def log_in(password) #
     print ">"
     input = gets.chomp
     if 
-        (input.to_s) == (password.to_s) 
-        puts "Vous êtes reptilien."
+        (input) == (password)
+        return welcome_screen
     else
-        puts "Votre rang n'est pas assez élevé pour accéder à ce dossier. Désolé."
+        puts "Oh non ! Votre rang n'est pas assez élevé pour accéder à ce dossier !"
+        return log_in(password)
     end
+end
+
+def welcome_screen
+    puts "Bienvenue. Vous êtes reptilien. Vous avez le droit de savoir."
+    puts "Marylin c'est juste une contraction de Marie-Hélène. Elle était française."
+    puts "John est breton. Son vrai nom de famille, c'est Quenne D'y."
+    puts "Accédez maintenant à la section O_Di_R_8 de votre desserveau reptilien pour visualiser les photos de ce dossier."
+    puts "Merci d'avoir utilisé le terminal du centre centre (Bl)Oups Security Services pour votre requête."
 end
 
 def perform
